@@ -1,0 +1,21 @@
+#homepage-logo {
+  width: 120px;
+  height: 92.98px;
+}
+
+#mainView {
+  margin-top: 30%;
+}
+
+#logoView {
+  margin-top: 10%;
+}
+
+.buttonGroup {
+  display: flex;
+  flex-direction: column;
+}
+
+page {
+  background-color: #FECD51
+}

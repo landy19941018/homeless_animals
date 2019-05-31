@@ -1,0 +1,37 @@
+<view class="searcher">
+  <button bindtap='selectCity' class='button'>选择城市</button>
+	<input type="text" bindinput="keywordTyping" placeholder="请输入地址" placeholder-class="placeholder-class" />
+</view>
+<view class='result-list'>
+
+</view>
+<view class='no-result'>
+  <text class='no-result-msg'>没有可以显示的结果，请选择地点</text>
+</view>
+
+<view class='container'>
+  <block class="" wx:for="{{list}}" wx:key="id">
+    <!-- <navigator url='../animalPage/animal?id={{item.id}}'> -->
+    <navigator url='../animal/animal?item={{item.stringifiedVal}}'>
+      <view hover-class='hover-class' class='item-container' id="{{item.id}}">
+        <!--左边图片-->
+        <view class="item_pic">
+          <image src="{{item.photo}}" mode="aspectFit"></image>
+        </view>
+        <!-- 右边内容 上下结构 -->
+        <view class='item_text'>
+          <text class='item_title'>
+            <text wx:if="{{item.breed}}">{{item.breed}}</text>
+            <text wx:if="{{item.pet_name}}">,{{item.pet_name}}</text>
+          </text>
+          <text class='item_content'>{{item.description}}</text>
+          <!-- 右边底部内容 左右结构 -->
+          <view style='display:flex; flex-direction:row; height:40rpx;'>
+            <text class='item_location'>发现于{{item.location}}</text>
+            <text class='item_distance'>{{item.distance}}</text>
+          </view>
+        </view>
+      </view>
+    </navigator>
+  </block>
+</view>

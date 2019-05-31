@@ -1,0 +1,12 @@
+<view class="container">
+  <view id='logoView'>
+    <image src='../../images/logo.png' id='homepage-logo'></image>
+  </view>
+  
+  <view id='mainView'>
+    <view class='buttonGroup'>
+      <button bindtap='toLost' class='button'>我丢失了宠物</button>
+      <button bindtap='toFound' class='button'>我捡到了宠物</button>
+    </view>
+  </view>
+</view>

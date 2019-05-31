@@ -1,0 +1,15 @@
+<!--pages/animalPage/animal.wxml-->
+<view class='container' style='display:block;'>
+  <view class='item'>
+    <view class='left'>时间</view>
+    <view class='right'>{{animal.id}}</view>
+  </view>
+  <view style='width:256rpx; height:256; margin:40rpx;'>
+    <image class='index-logo' style='width:128rpx; height:128rpx'
+    src="{{animal.photo}}" mode="aspectFit"></image>
+  </view>
+  <view class='item'>
+    <view class='left'>项目</view>
+    <view class='right'>{{animal.description}}</view>
+  </view>
+</view>

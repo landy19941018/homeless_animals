@@ -1,3 +1,7 @@
+.container {
+  padding: 200rpx 0;
+}
+
 #homepage-logo {
   width: 120px;
   height: 92.98px;

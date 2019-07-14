@@ -1,3 +1,5 @@
+"use strict";
+
 var QQMapWX = require('../../utils/qqmap-wx-jssdk.min.js');
 var qqmapsdk;
 
@@ -7,24 +9,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    list: [
-      {
-        id: 1,
-        photo: 'https://res.wx.qq.com/wxdoc/dist/assets/img/0.4cb08bb4.jpg',
-        name: 'name',
-        description: 'descriptiondescriptiondescriptiondescriptiondescription',
-        location: 'location1',
-        distance: '200m'
-      },
-      {
-        id: 12,
-        photo: '',
-        name: 'name2',
-        description: 'descriptiondescriptiondescriptiondescriptiondescription2',
-        location: 'location2',
-        distance: '40m'
-      },
-    ]
+    list: [],
   },
 
   /**

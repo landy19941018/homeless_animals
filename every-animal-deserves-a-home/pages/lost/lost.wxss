@@ -2,6 +2,15 @@ page {
   background-color: #FECD51
 }
 
+.searcher {
+  display: flex;
+}
+button {
+  background: #FFFFFF;
+  font-size:10px;
+  margin-left:0;
+}
+
 .item-container {
   display:flex;
   height:240rpx;
@@ -55,4 +64,12 @@ page {
 
 .hover-class{
   background-color: #A4D3EE;
+}
+
+.add-icon{
+  height: 40px;
+  width: 40px;
+  position:fixed;
+  bottom:10px;
+  left:10px;
 }

@@ -1,15 +1,20 @@
 <!--pages/animalPage/animal.wxml-->
 <view class='container' style='display:block;'>
-  <view class='item'>
-    <view class='left'>时间</view>
-    <view class='right'>{{animal.id}}</view>
+  <view>
+    <image class='index-logo' src="{{animal.photo}}" mode="aspectFit"></image>
   </view>
-  <view style='width:256rpx; height:256; margin:40rpx;'>
-    <image class='index-logo' style='width:128rpx; height:128rpx'
-    src="{{animal.photo}}" mode="aspectFit"></image>
-  </view>
-  <view class='item'>
-    <view class='left'>项目</view>
-    <view class='right'>{{animal.description}}</view>
+  <view class='animal'>
+    <view class='animal-name'>
+      <view class='center'>{{animal.pet_name}}</view>
+    </view>
+    <view class='description'>{{animal.description}}</view>
+    <view class="table">
+      <block wx:for="{{animalAttrs}}" wx:key="{{key}}">
+        <view class="tr">
+          <view class="td key">{{item.key}}</view>
+          <view class="td value">{{item.value}}</view>
+        </view>
+      </block>
+    </view>
   </view>
 </view>

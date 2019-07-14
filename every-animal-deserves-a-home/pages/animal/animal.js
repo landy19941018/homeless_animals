@@ -6,6 +6,7 @@ Page({
    */
   data: {
     animal: {},
+    animalAttrs: [],
   },
 
   /**
@@ -13,8 +14,33 @@ Page({
    */
   onLoad: function (options) {
     const animal = JSON.parse(options.item);
+    
+    const animalAttrs = [];
+    animalAttrs.push({
+      key:'品种',
+      value: animal.breed,
+    });
+    animalAttrs.push({
+      key: '颜色',
+      value: animal.color,
+    });
+    animalAttrs.push({
+      key: '特征',
+      value: animal.remark,
+    });
+    const contact = animal.contact_name + '' + animal.contact_phone
+    animalAttrs.push({
+      key: '联系方式',
+      value: contact,
+    });
+    
+    // for(const key in animal) {
+    //   const attr = {key, value: animal[key]};
+    //   animalAttrs.push(attr);
+    // }
     this.setData({
       animal,
+      animalAttrs,
     });
   },
 

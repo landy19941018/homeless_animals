@@ -1,18 +1,18 @@
 <view class="searcher">
-  <button bindtap='selectCity' class='button'>选择城市</button>
+  <button bindtap='selectCity'>选择城市</button>
 	<input type="text" bindinput="keywordTyping" placeholder="请输入地址" placeholder-class="placeholder-class" />
 </view>
-<view class='result-list'>
-
-</view>
+<view class='result-list'></view>
 <view class='no-result'>
   <text class='no-result-msg'>没有可以显示的结果，请选择地点</text>
 </view>
 
+<image class='add-icon' src='../../images/add-icon.svg'></image>
+
 <view class='container'>
   <block class="" wx:for="{{list}}" wx:key="id">
     <!-- <navigator url='../animalPage/animal?id={{item.id}}'> -->
-    <navigator url='../animal/animal?item={{item}}'>
+    <navigator url='../animal/animal?item={{item.stringifiedVal}}'>
       <view hover-class='hover-class' class='item-container' id="{{item.id}}">
         <!--左边图片-->
         <view class="item_pic">

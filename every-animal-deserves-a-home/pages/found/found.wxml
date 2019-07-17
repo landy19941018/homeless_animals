@@ -7,7 +7,24 @@
   <text class='no-result-msg'>没有可以显示的结果，请选择地点</text>
 </view> -->
 
-<image class='add-icon' src='../../images/add-icon.svg'></image>
+<image class='add-icon' src='../../images/add-icon.svg' bindtap="powerDrawer" data-status="open"></image>
+<!--mask-->
+<view class="drawer_screen" bindtap="powerDrawer" data-status="close" wx:if="{{showModalStatus}}"></view>
+<!--content-->
+<!--使用animation属性指定需要执行的动画-->
+<view animation="{{animationData}}" class="drawer_attr_box" wx:if="{{showModalStatus}}">
+  <!--drawer content-->
+  <view class="drawer_content">
+    <view class="drawer_select title line">发布寻主告示</view>
+    <navigator url='../found-upload/found-upload'>
+      <view class="drawer_select line">我捡到了猫猫</view>
+    </navigator>
+    <navigator url='../found-upload/found-upload'>
+      <view class="drawer_select line">我捡到了狗狗</view>
+    </navigator>
+    <view class="drawer_select cancel" bindtap="powerDrawer" data-status="close">取消</view>
+  </view>
+</view>
 
 <view class='container'>
   <block class="" wx:for="{{list}}" wx:key="id">

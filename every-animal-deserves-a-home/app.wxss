@@ -1,4 +1,7 @@
 /**app.wxss**/
+page{
+  background: #FECD51;
+}
 .container {
   display: flex;
   flex-direction: column;
@@ -12,6 +15,7 @@
   background: #FFFFFF;
   border-radius: 10px;
   padding: 5px;
-  margin: 10px;
+  margin-top: 10px;
   width: 200px;
+  align-items: center;
 }

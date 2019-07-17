@@ -8,6 +8,7 @@ Page({
    */
   data: {
     list: [],
+    showModalStatus: false,
   },
 
   /**
@@ -52,10 +53,7 @@ Page({
     ];
     for (const post of posts) {
       post.distance = `${200}m`;
-      console.log(JSON.stringify(post));
       post.stringifiedVal = JSON.stringify(post);
-      console.log(post);
-      console.log(post.stringifiedVal);
     }
     this.setData({ list: posts });
     // var that = this;
@@ -136,5 +134,50 @@ Page({
     wx.navigateTo({
       url: '/libs/citySelector/switchcity/switchcity',
     })
-  }
+  },
+  
+  powerDrawer: function (e) {
+    var currentStatus = e.currentTarget.dataset.status;
+    this.drawerFromBottom(currentStatus)
+  },
+  
+  drawerFromBottom: function(currentStatus) {
+    /* 动画部分 */
+    // 第1步：创建动画实例 
+    var animation = wx.createAnimation({
+      duration: 200,  //动画时长
+      timingFunction: "linear", //线性
+      delay: 0,  //0则不延迟
+    });
+
+    // 第2步：这个动画实例赋给当前的动画实例
+    this.animation = animation;
+
+    // 第3步：执行第一组动画：Y轴偏移240px后(盒子高度是240px)，停
+    animation.translateY(240).step();
+
+    // 第4步：导出动画对象赋给数据对象储存
+    this.setData({
+      animationData: animation.export(),
+    })
+
+    // 第5步：设置定时器到指定时候后，执行第二组动画
+    setTimeout(function () {
+      animation.translateY(0).step()
+      this.setData({
+        animationData: animation,
+      });
+      if (currentStatus == "close") {
+        this.setData({
+          showModalStatus: false,
+        });
+      }
+    }.bind(this), 200);
+
+    if (currentStatus == "open") {
+      this.setData({
+        showModalStatus: true,
+      });
+    }
+  },
 })

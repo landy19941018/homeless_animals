@@ -7,7 +7,9 @@
     "pages/mine/mine",
     "pages/found/found",
     "libs/citySelector/switchcity/switchcity",
-    "pages/animal/animal"
+    "pages/animal/animal",
+    "pages/found-upload/found-upload",
+    "pages/lost-upload/lost-upload"
   ],
   "window": {
     "backgroundTextStyle": "light",

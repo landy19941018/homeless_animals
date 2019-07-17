@@ -1,0 +1,47 @@
+/* pages/lost-upload/lost-upload.wxss */
+.item_pic {
+  display: flex;
+  width:100%;
+  height:212rpx;
+}
+
+image {
+  width:180rpx;
+  height:180rpx;
+}
+
+.image-wrap {
+  width: 180rpx;
+  margin-left: 6rpx;
+}
+
+.image-remover {
+  font-size: 20rpx;
+}
+
+/* start of table */
+.table {
+  border: 0px solid darkgray;
+  background: white;
+  border-radius: 24px 24px 0 0;
+}
+.tr {
+  display: flex;
+  width: 730rpx;
+  flex-direction: row;
+  margin: 12rpx;
+  border-bottom: 1px solid #f8f8f8;
+}
+.key {
+  flex: 1;
+  color: #FECD51;
+  font-weight:700;
+  text-align: left;
+}
+.btn-area{
+  margin: 20rpx;
+}
+button{
+  margin: 10rpx 0;
+}
+/* end of table */

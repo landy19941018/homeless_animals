@@ -14,6 +14,7 @@ button {
 .item-container {
   display:flex;
   height:240rpx;
+  width: 720rpx;
   border-bottom: 1px solid #DBDBDB
 }
 
